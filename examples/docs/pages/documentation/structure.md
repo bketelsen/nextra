@@ -1,6 +1,6 @@
 ---
 title: Structures
-weight: 1
+weight: 4
 excerpt: structure is awesome
 publish_date: 2021-04-20
 ---

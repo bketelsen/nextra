@@ -141,14 +141,7 @@ function File({ item, anchors }) {
 }
 
 function Menu({ dir, anchors }) {
-  {
-    dir.map(item => {
-      if (item.children) {
-        item.children.sort((a, b) => (a.weight > b.weight) ? 1 : -1)
-      }
 
-    })
-  }
   return (
     <ul>
       {dir.map(item => {

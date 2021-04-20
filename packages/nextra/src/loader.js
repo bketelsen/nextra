@@ -37,6 +37,7 @@ async function getPageMap(currentResourcePath) {
 
             return {
               name: f.name,
+              weight: 1,
               children,
               route: fileRoute
             }
@@ -53,7 +54,6 @@ async function getPageMap(currentResourcePath) {
               const { data } = grayMatter(fileContents)
 
               if (Object.keys(data).length) {
-                console.log("has frontmatter")
                 const name = data.title || removeExtension(f.name)
                 const weight = data.weight || 0
                 return {
@@ -93,8 +93,6 @@ async function getPageMap(currentResourcePath) {
         if (!item) return
         if (item.route === activeRoute) {
           activeRouteTitle = dirMeta[item.name] || item.name
-          console.log(activeRouteTitle)
-          console.log(item.weight || 'none')
         }
         return { ...item }
       })
@@ -164,6 +162,11 @@ export default async function (source) {
 
   // Generate the page map
   let [pageMap, route, title] = await getPageMap(resourcePath, locales)
+  pageMap.forEach(item => {
+    if (item.children) {
+      item.children.sort((a, b) => (a.weight < b.weight) ? 1 : -1)
+    }
+  })
 
   // Extract frontMatter information if it exists
   const { data, content } = grayMatter(source)

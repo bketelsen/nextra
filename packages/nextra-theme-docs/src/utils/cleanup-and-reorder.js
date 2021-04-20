@@ -34,12 +34,7 @@ export default function cleanupAndReorder(list, locale, defaultLocale) {
       (a.locale === locale || ((a.locale === defaultLocale || !a.locale) && !hasLocale.get(a.name)))
     )
     .sort((a, b) => {
-      const indexA = metaKeys.indexOf(a.weight)
-      const indexB = metaKeys.indexOf(b.weight)
-      if (indexA === -1 && indexB === -1) return a.name < b.name ? -1 : 1
-      if (indexA === -1) return 1
-      if (indexB === -1) return -1
-      return indexA - indexB
+      return a.weight < b.weight ? -1 : 1
     })
     .map(a => {
       return {
