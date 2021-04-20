@@ -1,6 +1,8 @@
 ---
 title: Anchors
 weight: 3
+excerpt: Anchors are awesome
+publish_date: 2021-04-20
 ---
 
 # Anchor Links
