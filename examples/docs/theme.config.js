@@ -25,7 +25,7 @@ export default {
       <meta name="apple-mobile-web-app-title" content="CueBlox" />
     </>
   ),
-  search: true,
+  search: false,
   UNSTABLE_stork: true,
   prevLinks: true,
   nextLinks: true,
