@@ -1,13 +1,13 @@
 export default {
-  repository: 'https://github.com/shuding/nextra',
+  repository: 'https://github.com/bketelsen/nextra',
   branch: 'core',
   path: '/examples/docs',
-  titleSuffix: ' – Nextra',
+  titleSuffix: ' – CueBlox',
   logo: (
     <>
-      <span className="font-extrabold hidden md:inline">Nextra</span>
+      <span className="font-extrabold hidden md:inline">CueBlox</span>
       <span className="mr-2 ml-2 text-gray-600 font-normal hidden md:inline">
-        The Next Site Builder
+        Do More with your Content
       </span>
     </>
   ),
@@ -17,12 +17,12 @@ export default {
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Nextra: the next site builder" />
+      <meta name="description" content="CueBlox: do more with your content" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@shuding_" />
-      <meta property="og:title" content="Nextra: the next site builder" />
-      <meta property="og:description" content="Nextra: the next site builder" />
-      <meta name="apple-mobile-web-app-title" content="Nextra" />
+      <meta name="twitter:site" content="@cueblox" />
+      <meta property="og:title" content="CueBlox: do more with your content" />
+      <meta property="og:description" content="CueBlox: do more with your content" />
+      <meta name="apple-mobile-web-app-title" content="CueBlox" />
     </>
   ),
   search: true,
@@ -31,7 +31,6 @@ export default {
   nextLinks: true,
   footer: true,
   footerEditOnGitHubLink: true,
-  footerEditOnGitHubText: ({ locale }) =>
-    locale === 'zh' ? '前往 GitHub 编辑此页' : 'Edit this page on GitHub',
-  footerText: <>MIT {new Date().getFullYear()} © Shu Ding.</>
+  footerEditOnGitHubText: 'Edit this page on GitHub',
+  footerText: <>MIT {new Date().getFullYear()} © CueBlox.</>
 }
